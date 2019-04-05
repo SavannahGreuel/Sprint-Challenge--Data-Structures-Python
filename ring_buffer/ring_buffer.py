@@ -6,7 +6,9 @@ class RingBuffer:
 
   def append(self, item):
     #new item, gets put in oldest datapoint's spot. ( index 0)
-    pass
+    self.storage.pop(0)
+    self.storage.append(item)
+
 
   def get(self):
-    pass
+    return self.storage
